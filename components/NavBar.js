@@ -10,7 +10,7 @@ function NavBar() {
   return (
     <div className='flex justify-between px-4 py-1'>
       <div>
-        <a href="/"><img src='/logo.png' alt='logo' width={120} height={60} /></a>
+        <a href="/"><img src='./logo.png' alt='logo' width={120} height={60} /></a>
       </div>
       <div className='flex mt-2 gap-10'>
         {user && <a href="/dashboard"><h2>Dashboard</h2></a>}
