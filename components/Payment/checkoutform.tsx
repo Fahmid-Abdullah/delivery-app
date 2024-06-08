@@ -53,7 +53,7 @@ const CheckoutForm: React.FC<CheckoutFormProps> = ({ deliveryPrice }) => {
       clientSecret: clientSecret,
       elements,
       confirmParams: {
-        return_url: "http://localhost:3000/dashboard",
+        return_url: "https://delivery-plus.vercel.app/dashboard",
       }
     });
   };
