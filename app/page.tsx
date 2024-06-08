@@ -1,7 +1,18 @@
+"use client"
 import Image from "next/image";
 import Link from "next/link";
+import { UserButton, useUser } from '@clerk/nextjs';
+import { useRouter } from 'next/navigation';
 
 export default function Home() {
+  const { user } = useUser();
+  const router = useRouter();
+
+  // Redirect to dashboard if user is logged in
+  if (user) {
+    router.push('/dashboard');
+  }
+
   return (
     <div className="relative flex flex-col items-center justify-between min-h-screen bg-gray-100">
       <Image
