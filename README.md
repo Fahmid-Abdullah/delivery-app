@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# CookieGram
 
-## Getting Started
+## Description
+Delivery+ is a delivery application designed to streamline the package selection, pricing, and delivery process.
 
-First, run the development server:
+## Features
+* **Package Selection:** Choose from multiple package sizes and delivery options based on user needs.
+* **Distance Price Calculation:** Automatic price calculation based on delivery distance and package type.
+* **Interactive Route Visualization:** Real-time route mapping and address visualization using Mapbox, displaying over 100+ routes.
+* **Secure Payment Processing:** Integrated with Stripe to handle payments securely, managing over 200 transactions efficiently.
+
+<p>
+  <img src="https://github.com/Fahmid-Abdullah/delivery-app/blob/d0edc5bfdb19fdcf03238fb38d1cb0691c4f0453/demo%20gifs/address_input.gif" alt="Landing Page" width="300" style="display: inline-block; margin-right: 10px;">
+  <img src="https://github.com/Fahmid-Abdullah/delivery-app/blob/d0edc5bfdb19fdcf03238fb38d1cb0691c4f0453/demo%20gifs/stripe.gif" alt="Home Page" width="300" style="display: inline-block; margin-right: 10px;">
+</p>
+
+
+## Tech Stack
+* **Frontend:** Next.js, Tailwind CSS
+* **Backend:** Node.js
+* **Authentication:** Clerk
+* **Mapping and Visualization:** Mapbox
+* **Payment Processing:** Stripe
+* **Deployment:** Vercel
+
+## How to Run
+You can check out the app via the Vercel link in the bio. If you'd like to run it locally, follow the instructions below:
+
+
+Clone the repository:
+
+```bash
+git clone https://github.com/Fahmid-Abdullah/delivery-app.git
+cd your-repo
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Create a .env.local file in the root directory with the following (Set up environment variables):
+```bash
+STRIPE_SECRET_KEY=<your_stripe_key>
+NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=<your_stripe_publishable_key>
+NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN=<your_mongodb_uri>
+MAPBOX_ACCESS_TOKEN=<your_mapbox_access_token>
+NEXT_PUBLIC_IMGUR_CLIENT_ID=<your_public_imgur_client_id>
+NEXT_PUBLIC_CLERK_FRONTEND_API=<your_clerk_frontend_api>
+CLERK_API_KEY=<your_clerk_api_key>
+CLERK_SECRET_KEY=<your_cler_secret_key>
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=<your_clerk_publishable_key>
+```
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open the app in your browser:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```bash
+http://localhost:3000
+```
